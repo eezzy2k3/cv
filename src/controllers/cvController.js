@@ -13,11 +13,12 @@ const generate = async (req,res) => {
   const url = 'https://api.openai.com/v1/engines/davinci/completions';
   const params = {
     "prompt": prompt ,
-    "max_tokens": 220,
-    "temperature": 0.7,
+    "max_tokens": 120,
+    "temperature": 0.6,
     "frequency_penalty": 0.5,
     "n": 1
   };
+
   const headers = {
     'Authorization': `Bearer ${process.env.OPENAI_SECRET_KEY}`,
   };
